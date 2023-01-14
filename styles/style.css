@@ -14,6 +14,11 @@ body{
 }
 
 /* Header Styles */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .section-title{
     font-size: 26px;
     color: #562EFF;
@@ -24,8 +29,8 @@ body{
 .container{
     background-color: #fff;
     border-radius: 8px;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 900px;
+    /* margin: 0 auto; */
 }
 
 .players-container{
@@ -57,6 +62,17 @@ hr{
     margin-top: 30px;
 }
 
+/* Header's Media Queries */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+}
+
 /* Blogs Styles */
 .blog-container{
     display: grid;
@@ -84,6 +100,15 @@ article > p> a{
     text-decoration: none;
 }
 
+@media screen and (max-width: 688px) {
+    .blog-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .blog-content{
+        flex-direction: column;
+    }
+}
 /* Courses Styles */
 .course-container{
     display: grid;
@@ -91,8 +116,8 @@ article > p> a{
     padding-left: 33px;
     padding-bottom: 30px;
 }
-.courses{
-
+.course{
+    margin-top: 20px;
 }
 
 .courses > img{
@@ -123,4 +148,11 @@ article > a{
     background-color:#FFE4E8;
     border-radius: 15px;
     padding: 5px 10px;
+}
+
+@media screen and (max-width: 688px) {
+    .course-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }
