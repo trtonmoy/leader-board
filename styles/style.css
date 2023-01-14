@@ -109,13 +109,18 @@ article > a{
     color: orange;
 }
 
-.ratings{
+.rating{
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.filled{
+    color: #FFC014;
 }
 
 .clock{
-    background-color: orange;
-    color: red;
-    border-radius: 50%;
+    background-color:#FFE4E8;
+    border-radius: 15px;
+    padding: 5px 10px;
 }
